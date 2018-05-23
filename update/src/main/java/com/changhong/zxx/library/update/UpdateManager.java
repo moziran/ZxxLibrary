@@ -185,12 +185,13 @@ public final class UpdateManager {
      */
     public void openApk(Context context, String filePath) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         Uri uri;
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
             uri = UpdateProvider.getUriForFile(context, context.getPackageName() + ".updateprovider", new File(filePath));
-            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
         } else {
             uri = Uri.fromFile(new File(filePath));
         }
