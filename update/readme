@@ -1,0 +1,12 @@
+说明：packagename 为包名，在工程AndroidManifest.xml文件中添加以下部分：
+<provider
+            android:name=packagename+".UpdateProvider"
+            android:authorities=packagename+".updateprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
