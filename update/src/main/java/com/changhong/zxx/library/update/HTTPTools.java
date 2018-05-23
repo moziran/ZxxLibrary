@@ -370,9 +370,9 @@ public class HTTPTools {
             return Environment.getExternalStorageDirectory().getAbsolutePath();
         } else {
             if ("".equals(destDir)) {
-                return "/data/data/update/file";
+                return Environment.getDataDirectory().getAbsolutePath();
             }
-            return "/data/data/" + destDir + "/file";
+            return destDir + "/file";
         }
     }
 
