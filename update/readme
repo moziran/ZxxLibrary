@@ -1,4 +1,5 @@
-说明：packagename 为包名，在工程AndroidManifest.xml文件中添加以下部分：
+升级模块：包含检查更新、下载升级包、下载进度回调、安装升级包、安装回调等功能
+使用说明：packagename 为包名，在工程AndroidManifest.xml文件中添加以下部分：
 <provider
             android:name=packagename+".UpdateProvider"
             android:authorities=packagename+".updateprovider"
