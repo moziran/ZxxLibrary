@@ -184,7 +184,7 @@ public final class UpdateManager {
      * @param filePath
      */
     public void openApk(Context context, String filePath) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
+        Intent intent = new Intent();
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         Uri uri;
@@ -193,6 +193,7 @@ public final class UpdateManager {
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
         } else {
+            intent.setAction(Intent.ACTION_VIEW);
             uri = Uri.fromFile(new File(filePath));
         }
 
