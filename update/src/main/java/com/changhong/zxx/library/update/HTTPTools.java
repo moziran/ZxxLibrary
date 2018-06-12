@@ -31,8 +31,8 @@ import java.util.concurrent.Executors;
  */
 
 public class HTTPTools {
-    private static HTTPTools mInstance = null;
 
+    private static HTTPTools mInstance = null;
     private final Handler dispatchHandler = new Handler(Looper.getMainLooper());
     private ExecutorService executor;
 

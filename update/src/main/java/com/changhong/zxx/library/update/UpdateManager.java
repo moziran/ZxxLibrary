@@ -120,7 +120,7 @@ public final class UpdateManager {
      * @param onDownloadResult
      */
     public void downloadApk(String url, String destDir, String fileName, final OnDownloadResult onDownloadResult) {
-        HTTPTools.getInstance().downFile(url, destDir, fileName + ".apk", new HTTPTools.Callback() {
+        HTTPTools.getInstance().downFile(url, destDir, fileName, new HTTPTools.Callback() {
             @Override
             public void onError(Exception e) {
                 if (onDownloadResult != null) {

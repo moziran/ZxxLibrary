@@ -3,7 +3,7 @@ package com.changhong.zxx.library.update;
 /**
  * Copyright (c) 2017 北京视达科技有限责任公司 All rights reserved.
  *
- * @author cnjer
+ * @author zxx
  * @date 2017/3/17
  * @description
  */
